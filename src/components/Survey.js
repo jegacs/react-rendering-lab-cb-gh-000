@@ -14,7 +14,14 @@ class Survey extends React.Component {
       rating: 0
     };
   }
-  componentWillReceiveProps(nextProps)
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.rating > this.props.rating)
+      increaseRating()
+    if(nextProps.rating < this.props.rating)
+      decreaseRating()
+    if(nextProps.rating == this.props.rating)
+      maintainRating()
+  }
   increaseRating = () => {
     this.setState({ rating: this.state.rating + 1 });
   }
