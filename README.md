@@ -25,7 +25,7 @@ dislike the book, it would be *decreasing* and if they're indifferent the score 
 By the end of this section, all the tests under `<Rating />` section should be passing.
 
 
-### `shouldComponentUpdate()`
+### `shouldComponentUpdate()` 
 For this section, run the sample app and open the developer console. Look at the second section of tasks. You should
 see 3 circles: red, yellow and green. There is also a button which swaps the color of red and green circles. If you look
 at the developer console, we are logging out a message whenever a circle is re-rendered. Notice that all 3 circles get
