@@ -1,13 +1,15 @@
 import React from 'react';
 import { expect } from 'chai';
-import { shallow, mount } from 'enzyme';
+import { configure, shallow, mount } from 'enzyme';
 import sinon from 'sinon';
+import Adapter from 'enzyme-adapter-react-15';
 
 import Rating from '../src/components/Rating';
 import Circle from '../src/components/Circle';
 import Animation from '../src/components/Animation';
 import Pikachu from '../src/components/Pikachu';
 
+configure({ adapter: new Adapter() });
 
 describe('Rating', () => {
   it('sets the increasing state correctly', () => {
